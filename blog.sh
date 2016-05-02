@@ -33,8 +33,11 @@ do
   read imageAddress
   echo "Title of image:"
   read imageTitle
+  echo "Comments on image:"
+  read comments
   echo "<p>$imageTitle</p>
-  <h3><img border=1 src='$imageAddress'></img></h3>" >> $blog.html
+  <h2><img border=1 src='$imageAddress'></img></h2>
+  <p>$comments</p><br>" >> $blog.html
 done
 
 echo "</main>
