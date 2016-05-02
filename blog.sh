@@ -27,18 +27,17 @@ echo "<!doctype html>
 <main>
 <h2>Favorite places to be</h2><br>" >> $blog.html
 
-while true
-do
-  echo "Address of image:"
-  read imageAddress
-  echo "Title of image:"
-  read imageTitle
-  echo "Comments on image:"
-  read comments
-  echo "<p>$imageTitle</p>
-  <h2><img border=1 src='$imageAddress'></img></h2>
-  <p>$comments</p><br>" >> $blog.html
-done
+
+
+echo "Address of image:"
+read imageAddress
+echo "Title of image:"
+read imageTitle
+echo "Comments on image:"
+read comments
+echo "<p>$imageTitle</p>
+<h2><img border=1 src='$imageAddress'></img></h2>
+<p>$comments</p><br>" >> $blog.html
 
 echo "</main>
 </body>
