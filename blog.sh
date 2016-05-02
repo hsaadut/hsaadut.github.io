@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
+echo "What should this file's name be?"
+read blog
+echo "Blog title?"
+read blogTitle
+echo "<!doctype html>
+<html lang='en'>
+
 <title> Haseeb's Website.</title>
 <meta charset = "utf-8">
 <link rel = "stylesheet" href = "assignment1.css">
@@ -21,14 +25,18 @@
 </nav>
 
 <main>
-<h1>Favorite places to be</h1>
-<p style = "text-align:center">Night sky</p>
-<img src = "http://wallpapercave.com/wp/1iAHDsC.jpg" width = "960" height = "540">
+<h2>Favorite places to be</h2><br>" >> $blog.html
 
-</main>
-<footer>
-Copyright &copy; 2016 Haseeb's resume
-<br>
-</footer>
+while true
+do
+  echo "Address of image:"
+  read imageAddress
+  echo "Title of image:"
+  read imageTitle
+  echo "<p>$imageTitle</p>
+  <h3><img border=1 src='$imageAddress'></img></h3>" >> $blog.html
+done
+
+echo "</main>
 </body>
-</html>
+</html>" >> $blog.html
